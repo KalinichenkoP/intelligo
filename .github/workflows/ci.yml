@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+
+    services:
+      redis:
+        image: redis:7-alpine
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 10
+
+    env:
+      DOCKET_ALARM_USERNAME: ci@example.com
+      DOCKET_ALARM_PASSWORD: ci-password
+      REDIS_URL: redis://127.0.0.1:6379
+      NODE_ENV: test
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: yarn
+
+      - name: Install
+        run: yarn install --frozen-lockfile
+
+      - name: Lint
+        run: yarn lint:check
+
+      - name: Unit tests
+        run: yarn test
+
+      - name: Queue tests
+        run: yarn test:queue
+
+      - name: E2E tests
+        run: yarn test:e2e
+
+      - name: Build
+        run: yarn build

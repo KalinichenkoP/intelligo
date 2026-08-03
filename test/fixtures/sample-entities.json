@@ -1,0 +1,77 @@
+[
+  {
+    "entityId": 43432,
+    "entityType": "Person",
+    "sender": "INTELLIGO",
+    "entityDetails": {
+      "name": [
+        { "full": "Bradley Friedman", "confidence": 0.9 },
+        { "full": "Brad Gof Friedman", "confidence": 0.8 }
+      ],
+      "address": [
+        {
+          "full": "1301 Florida Mall Avenue. Orlando, FL 32809",
+          "confidence": 0.8
+        },
+        { "full": "1200 NW 6th AVENUE, MIAMI, FL", "confidence": 0.9 }
+      ]
+    }
+  },
+  {
+    "entityId": 23,
+    "entityType": "Person",
+    "sender": "INTELLIGO",
+    "entityDetails": {
+      "name": [
+        { "full": "Robert Gilbert", "confidence": 1 },
+        { "full": "Rob T Gil", "confidence": 0.1 }
+      ],
+      "address": [
+        { "full": "Idaho", "confidence": 1 },
+        { "full": "Utah", "confidence": 1 },
+        { "full": "Missouri", "confidence": 1 },
+        { "full": "Arizona, United States", "confidence": 1 }
+      ]
+    }
+  },
+  {
+    "entityId": 55,
+    "entityType": "Company",
+    "sender": "INTELLIGO",
+    "entityDetails": {
+      "name": [
+        { "full": "Westlake Services", "type": "LLC", "confidence": 1 }
+      ],
+      "address": [
+        {
+          "full": "4751 Wilshire Blvd. Suite 100. Los Angeles, CA 90010",
+          "confidence": 1
+        }
+      ]
+    }
+  },
+  {
+    "entityId": 88,
+    "entityType": "Company",
+    "sender": "INTELLIGO",
+    "entityDetails": {
+      "name": [
+        { "full": "GOLDMAN SACHS", "type": "LLC", "confidence": 1 }
+      ],
+      "address": [{ "full": "New York", "confidence": 1 }]
+    }
+  },
+  {
+    "entityId": 99,
+    "entityType": "Person",
+    "sender": "INTELLIGO",
+    "entityDetails": {
+      "name": [
+        { "full": "Christopher Brien", "confidence": 1 },
+        { "full": "Chris Brien", "confidence": 0.7 },
+        { "full": "Christopher Obrien", "confidence": 0.2 }
+      ],
+      "address": [{ "full": "New York", "confidence": 1 }]
+    }
+  }
+]
